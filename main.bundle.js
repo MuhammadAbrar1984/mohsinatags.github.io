@@ -47,7 +47,7 @@ let ApiService = class ApiService {
         this.base_url = 'https://pcwest.remotepc.com/v1/mohsin/my_machine';
         this.httpOptions = {
             headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({
-                'Access-Control-Allow-Origin': '*',
+                'Origin': '*',
                 'Content-Type': 'application/json',
                 'responseType': 'json'
             })
