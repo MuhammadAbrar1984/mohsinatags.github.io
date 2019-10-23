@@ -47,6 +47,7 @@ let ApiService = class ApiService {
         this.base_url = 'http://pcwest.remotepc.com/v1/mohsin/my_machine';
         this.httpOptions = {
             headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({
+		'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json',
                 'responseType': 'json'
             })
@@ -59,8 +60,8 @@ let ApiService = class ApiService {
         if (path.charAt(0) !== '/')
             path = '/' + path;
         if (search_string == '')
-            //return this.http.get(`${this.base_url}/list`+path, this.httpOptions);
-            return this.http.post(`${this.base_url}/list`, `{"path":"${path}"}`);
+            return this.http.get(`${this.base_url}/list`+path, this.httpOptions);
+            //return this.http.post(`${this.base_url}/list`, `{"path":"${path}"}`);
         else {
             return this.http.post(`${this.base_url}/search`, `{"path":"${path}","search_string":"${search_string}","search_sub_folder":"${search_sub_folder}"}`);
             //return this.http.get(`${this.base_url}/search/`,headersConfig );
