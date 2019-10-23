@@ -1000,6 +1000,10 @@ let FileService = class FileService {
         let file_attributes = [];
         this.ApiService.getFiles(folderId, term, search_sub_folder)
             .subscribe(data => {
+		if (!data) {
+                    console.log("data received is null");
+                    return;
+                }
             console.log(data);
             this.files = data;
             //console.log(this.files.contents);
