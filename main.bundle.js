@@ -44,10 +44,10 @@ let ApiService = class ApiService {
     constructor(http) {
         this.http = http;
         //end-point url 
-        this.base_url = 'https://pcwest.remotepc.com/v1/mohsin/my_machine';
+        this.base_url = 'http://pcwest.remotepc.com/v1/mohsin/my_machine';
         this.httpOptions = {
             headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({
-		'Access-Control-Allow-Origin': 'http://main-app-pc.apps.ca-central-1.starter.openshift-online.com',
+		'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json',
                 'responseType': 'json'
             })
