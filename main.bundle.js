@@ -60,9 +60,9 @@ let ApiService = class ApiService {
             path = '/' + path;
         if (search_string == '')
             //return this.http.get(`${this.base_url}/list`+path, this.httpOptions);
-            return this.http.post(`${this.base_url}/list`, `{"path":"${path}"}`, this.httpOptions);
+            return this.http.post(`${this.base_url}/list`, `{"path":"${path}"}`);
         else {
-            return this.http.post(`${this.base_url}/search`, `{"path":"${path}","search_string":"${search_string}","search_sub_folder":"${search_sub_folder}"}`, this.httpOptions);
+            return this.http.post(`${this.base_url}/search`, `{"path":"${path}","search_string":"${search_string}","search_sub_folder":"${search_sub_folder}"}`);
             //return this.http.get(`${this.base_url}/search/`,headersConfig );
         }
     }
